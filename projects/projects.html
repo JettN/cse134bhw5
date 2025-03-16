@@ -30,33 +30,51 @@
 
         <main>
             <hr>
-            <!--PUT Projects HERE-->
-            <aside>
-                <h4>Current Projects</h4>
-                <ol>
-                    <li>
-                        <details>
-                            <summary><b>UniversalAS Website</b></summary>
-                            <picture>
-                                <source srcset="../static/images/UAS_Quote_Logo 1200.jpg" media="(min-width: 1200px)">
-                                <source srcset="../static/images/UAS_Quote_Logo 800.jpg" media="(min-width: 800px)">
-                                <img src="../static/images/UAS_Quote_Logo 300.jpg" alt="Picture of UniversalAS logo">
-                            </picture>
-                            <p>Design and implement a website for UniversalAS</p>
-                        </details>
-                    </li>
-                </ol>
-            </aside>
-            
-
-            <h4>Completed Projects</h4>
+            <div class="selector">
+                <button id="local">Load Local</button>
+                <button id="cloud">Load Remote</button>
+                <button id="reset">Reset Local</button>
+            </div>
 
             <div id="gallery"></div>
 
             <script type="module" src="../static/js/component.js"></script>
             <script>
-                window.addEventListener('DOMContentLoaded', async () => {
-                    console.log("DOM Content loaded");
+                
+                document.getElementById("reset").addEventListener("click", () =>{
+                    localStorage.clear();
+                })
+
+                localBtn = document.getElementById("local")
+                localBtn.addEventListener("click", () => {
+                    console.log("loading from local");
+                    const data = localStorage.getItem("data")
+                    if(typeof data === 'undefined' || data === null){
+                        alert("There is no data store locally. Load data from remote first.");
+                        return;
+                    }
+                    else{
+                        data.forEach(project => {
+
+                            window.galleryItem = document.createElement("project-card");
+                            window.galleryItem.setAttribute("title", `${project.title}`);
+                            window.galleryItem.setAttribute("tech", `${project.tech}`);
+                            window.galleryItem.setAttribute("description", `${project.description}`);
+                            window.galleryItem.setAttribute("image1-url", `${project.image1_url}`);
+                            window.galleryItem.setAttribute("image2-url", `${project.image2_url}`);
+                            window.galleryItem.setAttribute("image3-url", `${project.image3-url}`);
+                            window.galleryItem.setAttribute("furtherReadings", `${project.furtherReadings}`);
+
+                            document.getElementById("gallery").appendChild(window.galleryItem);
+                            console.log(`${project.title} ${project.tech} ${project.description}: ${project.image1_url} ${project.image2_url} ${project.image3-url} ${project.furtherReadings}`);
+                        });
+                    }
+                })
+
+
+                cloudBtn = document.getElementById("cloud")
+                cloudBtn.addEventListener('click', async () => {
+                    console.log("loading from cloud");
                     const url = "https://api.jsonbin.io/v3/qs/67d741748561e97a50ed4948";
                     try {
                         const response = await fetch(url);
@@ -66,6 +84,7 @@
         
                         const jsonData = await response.json();
                         console.log(jsonData);
+                        localStorage.setItem("data", jsonData.record)
                         await jsonData.record.forEach(project => {
 
                             window.galleryItem = document.createElement("project-card");
@@ -91,12 +110,6 @@
                     target.style.border = target.style.border == "" ? "5px solid black" : "";
                 });
             </script>
-
-            <details>
-                <summary><b>Project 2: <a href="project2.html">Successorator</a></b></summary>
-
-                <p><strong>Successorator</strong> is a todo list app developed for Android devices that allows users to create tasks for different locations</p>
-            </details>
 
         </main>
 
