@@ -66,6 +66,7 @@
                         }
         
                         const jsonData = await response.json();
+                        console.log(jsonData);
                         jsonData.record.forEach(project => {
 
                             window.galleryItem = document.createElement("project-card");
