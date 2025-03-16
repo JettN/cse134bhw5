@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html lang="en" data-theme="light">
+    <head>
+        <title>Jett Ngo's Contact</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Contact page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../static/css/main_style.css">
+    </head>
+    <body>
+
+        <header>
+            <h1>Contact</h1>
+            <button id="themeSwitch">
+                <span class="icon">🌞</span>
+                <noscript>
+                    <style>
+                        .icon {
+                            display: none;
+                        }
+                    </style>
+                    <p>Certain features such as theme toggling and form validation are not available without JavaScript. Please enable it to access those features.</p>
+                </noscript>
+            </button>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Resume</a></li>
+                    <li><a href="../about/about.html">About</a></li>
+                    <li><a href="../projects/projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="form-no-js.html">No JS Contact Form</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="contact-main">
+            <hr>
+            <h2>Contact Me:</h1>
+            <address>
+                <p>Email: <a href="mailto:jettnngo@gmail.com">jettnngo@gmail.com</a></p>
+                <p>LinkedIn: <a href="linkedin.com">linkedin.com</a></p>
+                <p>Github: <a href="https://github.com/JettN">https://github.com/JettN</a></p>
+            </address>
+
+            <form action="https://httpbin.org/post" method="POST">
+                <fieldset>
+                    <legend>Send a message directly (all fields required):</legend>
+
+                    <input type="hidden" name="possible_bot" value="true">
+                    <input type="hidden" id="form_errors" name="form-errors">
+
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" pattern="[A-Za-z' -.]+" minlength="1" maxlength="64" required>
+                    <output id="fnameError" class="error"></output>
+                    <output id="fnameInfo" class="info"></output>
+                    <br>
+                    <br>
+                    
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" pattern="[A-Za-z' -.]+" minlength="1" maxlength="64" required>
+                    <output id="lnameError" class="error"></output>
+                    <output id="lnameInfo" class="info"></output>
+                    <br>
+                    <br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" required>
+                    <output id="emailError" class="error"></output>
+                    <output id="emailInfo" class="info"></output>
+                    <br>
+                    <br>
+
+                    <label for="message">How can I help?</label>
+                    <div class="centerStuff">
+                        <textarea id="message" name="message" placeholder="Enter your message here..." maxlength="250" required></textarea>
+                        <output id="messageError" class="error"></output>
+                        <output id="messageInfo" class="info"></output>
+                    </div>
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 My Portfolio</p>
+            <p>Follow me on <a href="https://linkedin.com/in/myprofile" target="_blank">LinkedIn</a></p>
+        </footer>
+
+        <script src="../static/js/form-validation.js"></script>
+        <script src="../static/js/theme-switch.js"></script>
+    </body>
+</html>
