@@ -218,7 +218,6 @@ form {
 .error {
     display: block;
     color: red;
-    background-color: rgb(76, 96, 133); 
 }
 
 .errorActive {
