@@ -58,7 +58,7 @@
             <script>
                 window.addEventListener('DOMContentLoaded', async () => {
                     console.log("DOM Content loaded");
-                    const url = "https://api.jsonbin.io/v3/qs/67d73e728561e97a50ed47dc";
+                    const url = "https://api.jsonbin.io/v3/qs/67d741748561e97a50ed4948";
                     try {
                         const response = await fetch(url);
                         if (!response.ok) {
@@ -67,7 +67,7 @@
         
                         const jsonData = await response.json();
                         console.log(jsonData);
-                        jsonData.record.forEach(project => {
+                        await jsonData.record.forEach(project => {
 
                             window.galleryItem = document.createElement("project-card");
                             window.galleryItem.setAttribute("title", `${project.title}`);
