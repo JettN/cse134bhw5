@@ -55,7 +55,7 @@
                 localBtn = document.getElementById("local")
                 localBtn.addEventListener("click", () => {
                     console.log("loading from local");
-                    const data = localStorage.getItem("data")
+                    const data = JSON.parse(localStorage.getItem("data"))
                     console.log(data)
                     if(typeof data === 'undefined' || data === null){
                         alert("There is no data store locally. Load data from remote first.");
@@ -92,7 +92,7 @@
         
                         const jsonData = await response.json();
                         console.log(jsonData);
-                        localStorage.setItem("data", jsonData.record)
+                        localStorage.setItem("data", JSON.stringify(jsonData.record))
                         await jsonData.record.forEach(project => {
 
                             window.galleryItem = document.createElement("project-card");
