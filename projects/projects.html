@@ -103,6 +103,7 @@
         
                         const jsonData = await response.json();
                         console.log(jsonData);
+                        console.log(jsonData.record);
                         localStorage.setItem("data", JSON.stringify(jsonData.record))
                         console.log(jsonData.record)
                         await jsonData.record.forEach(project => {
