@@ -53,16 +53,16 @@
                 })
 
                 localBtn = document.getElementById("local")
-                localBtn.addEventListener("click", () => {
+                localBtn.addEventListener("click", async () => {
                     console.log("loading from local");
-                    const data = JSON.parse(localStorage.getItem("data"))
+                    const data = await JSON.parse(localStorage.getItem("data"))
                     console.log(data)
                     if(typeof data === 'undefined' || data === null){
                         alert("There is no data store locally. Load data from remote first.");
                         return;
                     }
                     else{
-                        data.forEach(project => {
+                        await data.forEach(project => {
                             console.log(project)
                             window.galleryItem = document.createElement("project-card");
                             window.galleryItem.setAttribute("title", `${project.title}`);
