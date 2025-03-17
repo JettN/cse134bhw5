@@ -12,7 +12,6 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
-                
             }
 
             #gallery {
@@ -50,9 +49,33 @@
             </div>
             <br>
         </header>
+        <img src="../static/images/138_brain_scan_900-min.png" alt="">
+        <img src="../static/images/138 brain scan 500.webp" alt="">
+        <img src="../static/images/138 brain scan 680-min.png" alt="">
+        
+
+        <img src="../static/images/158r report 900-min.PNG" alt="">
+        <img src="../static/images/158r report 500-min.PNG" alt="">
+        <img src="../static/images/158r report 604-min.PNG" alt="">
+        
+
+        <img src="../static/images/successorator1_960.webp" alt="">
+        <img src="../static/images/successorator1_960_500x500.webp" alt="">
+        <img src="../static/images/successorator1_700.webp" alt="">
+
 
         <main>
-
+            <div class="template">
+                <h2 class="heading">Example Card</h2>
+                <picture style="display: inline-block;">
+                    <source srcset="${img1url}" media="(min-width: 1500px)">
+                    <source srcset="${img2url}" media="(min-width: 200px)">
+                    <img src="${img3url}" alt="${title} main screen">
+                </picture>
+                <p class="caption">Tech stack: ${tech}</p>
+                <p>${description}</p>
+                <a href="${furtherReading}">Further Reading</a>
+            </div>
             <div id="gallery"></div>
 
             <script type="module" src="../static/js/component.js"></script>
