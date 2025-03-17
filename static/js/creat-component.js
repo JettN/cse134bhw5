@@ -76,5 +76,5 @@ cloudBtn.addEventListener('click', async () => {
 
 document.getElementById('gallery').addEventListener('click', (event) => {
     let target = event.target;
-    target.style.border = target.style.border == "" ? "5px solid black" : "";
+    target.style.border = target.style.border == "" ? "5px solid #52B788" : "";
 });
