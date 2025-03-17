@@ -41,6 +41,7 @@ html.dark-mode, body.dark-mode, body.dark-mode blockquote, body.dark-mode .info{
 
 body.dark-mode button {
     background-color: var(--button-dark);
+    color: var(--text-dark);
 }
 
 body {
