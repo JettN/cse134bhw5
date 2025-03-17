@@ -15,7 +15,7 @@ localBtn.addEventListener("click", async () => {
     else{
         const example = document.getElementById("example_card");
         example.style.display = "none";
-
+        document.getElementById("gallery").innerHTML = '';
         await data.forEach(project => {
 
             console.log(project)
@@ -52,6 +52,7 @@ cloudBtn.addEventListener('click', async () => {
         localStorage.setItem("data", JSON.stringify(myData))
         const example = document.getElementById("example_card");
         example.style.display = "none";
+        document.getElementById("gallery").innerHTML = '';
         await myData.forEach(project => {
             console.log(project);
 

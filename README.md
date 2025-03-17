@@ -7,3 +7,5 @@ I added `Display: Grid` to the **About Me** page so it is easier to view all of 
 I removed image rotation when hovered feature. It was giving me a headache constantly seeing the image rotate whenever I accidentally hovered over it.
 
 Added `<hr>` tag at the end of every `<header>` for consistency
+
+Moved all style tags and JS code into files seperate from the html files
