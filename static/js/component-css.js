@@ -21,7 +21,9 @@ export function getComponentCSS() {
                     color: #47A8BD;
                 }
                 
-                a {
-                    color: #B2D3A8}
+                .card_link {
+                    color: #B2D3A8;
+                    text-decoration: underline;
+                }
             `;
         }

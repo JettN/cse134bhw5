@@ -31,7 +31,7 @@ class ProjectCard extends HTMLElement {
             </picture>
             <p class="caption">Tech stack: ${tech}</p>
             <p>${description}</p>
-            <a href="${furtherReading}">Further Reading</a>
+            <a class="card_link" href="${furtherReading}">Further Reading</a>
             </div>
         `;
         this.querySelector('.simple-card').addEventListener('click', () => this.doSomething());
