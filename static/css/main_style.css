@@ -18,7 +18,7 @@ html, body {
     color: var(--text-light);
 }
 
-button {
+#themeSwitch {
     background-color: var(--button-light);
     display: inline;
     margin-top: 2rem;
