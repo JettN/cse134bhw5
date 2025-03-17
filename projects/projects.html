@@ -50,6 +50,7 @@
                 
                 document.getElementById("reset").addEventListener("click", () =>{
                     localStorage.clear();
+                    console.log("Local reset correctly")
                 })
 
                 localBtn = document.getElementById("local")
@@ -75,7 +76,7 @@
                             window.galleryItem.setAttribute("furtherReadings", `${project.furtherReadings}`);
 
                             document.getElementById("gallery").appendChild(window.galleryItem);
-                            console.log(`${project.title} ${project.tech} ${project.description}: ${project.image1_url} ${project.image2_url} ${project.image3-url} ${project.furtherReadings}`);
+                            console.log(`${project.title} ${project.tech} ${project.description}: ${project.image1_url} ${project.image2_url} ${project.image3_url} ${project.furtherReadings}`);
                         });
                     }
                 })
@@ -108,7 +109,7 @@
                             window.galleryItem.setAttribute("furtherReadings", `${project.furtherReadings}`);
 
                             document.getElementById("gallery").appendChild(window.galleryItem);
-                            console.log(`${project.title} ${project.tech} ${project.description}: ${project.image1_url} ${project.image2_url} ${project.image3-url} ${project.furtherReadings}`);
+                            console.log(`${project.title} ${project.tech} ${project.description}: ${project.image1_url} ${project.image2_url} ${project.image3_url} ${project.furtherReadings}`);
                         });
         
                     } catch (error) {
