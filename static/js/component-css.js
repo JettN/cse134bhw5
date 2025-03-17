@@ -7,7 +7,7 @@ export function getComponentCSS() {
                     margin: auto;
                     padding: 2rem;
                     text-align: center;
-                    width: 50vw;
+                    width: 40dvw;
                     background-color: #85144B;
                     color: white; 
                 }
