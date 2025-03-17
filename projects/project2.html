@@ -7,28 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../static/css/main_style.css">
-
-        <style>
-            main {
-                display: grid;
-                grid-template-columns: auto auto;
-                grid-template-rows: auto;
-                grid-template-areas: "image main";
-                align-items: center;
-                justify-content: center;
-                margin: 2rem;
-            }
-
-            picture {
-                grid-area: image;
-                justify-self: stretch;
-                max-width: 100%;
-            }
-
-            #text {
-                grid-area: main;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -51,7 +29,7 @@
             <hr>
         </header>
 
-        <main>
+        <main class="two_column">
             <div id="text">
                 <h4>Tech Stack: Java, Android Studio</h4>
                 <p>Successorator is an Android app that reminds users of their daily tasks. It includes categories for tasks, such as home, work, school, etc. and allows for tasks to repeat daily, weekly, monthly, or yearly. It was developed using Agile methodologies and priciples.</p>
