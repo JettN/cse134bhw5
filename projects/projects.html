@@ -40,7 +40,7 @@
                 </ul>
             </nav>
             <hr>
-
+            <h2>Projects Need to Loaded Before Seen</h2>
             <div class="selector">
                 <p><b>Select Where to Load the Data From: </b></p>
                 <button id="local">Load Local</button>
@@ -68,7 +68,7 @@
                     const data = await JSON.parse(localStorage.getItem("data"))
                     console.log(data)
                     if(typeof data === 'undefined' || data === null){
-                        alert("There is no data store locally. Load data from remote first.");
+                        alert("There is no data stored locally. Load data from remote first.");
                         return;
                     }
                     else{
