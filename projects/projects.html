@@ -63,6 +63,7 @@
                     }
                     else{
                         await data.forEach(project => {
+
                             console.log(project)
                             window.galleryItem = document.createElement("project-card");
                             window.galleryItem.setAttribute("title", `${project.title}`);
@@ -70,7 +71,7 @@
                             window.galleryItem.setAttribute("description", `${project.description}`);
                             window.galleryItem.setAttribute("image1-url", `${project.image1_url}`);
                             window.galleryItem.setAttribute("image2-url", `${project.image2_url}`);
-                            window.galleryItem.setAttribute("image3-url", `${project.image3-url}`);
+                            window.galleryItem.setAttribute("image3-url", `${project.image3_url}`);
                             window.galleryItem.setAttribute("furtherReadings", `${project.furtherReadings}`);
 
                             document.getElementById("gallery").appendChild(window.galleryItem);
@@ -83,7 +84,7 @@
                 cloudBtn = document.getElementById("cloud")
                 cloudBtn.addEventListener('click', async () => {
                     console.log("loading from cloud");
-                    const url = "https://api.jsonbin.io/v3/qs/67d741748561e97a50ed4948";
+                    const url = "https://api.jsonbin.io/v3/qs/67d76b568a456b7966772c05";
                     try {
                         const response = await fetch(url);
                         if (!response.ok) {
@@ -95,6 +96,7 @@
                         localStorage.setItem("data", JSON.stringify(jsonData.record))
                         console.log(jsonData.record)
                         await jsonData.record.forEach(project => {
+                            console.log(project);
 
                             window.galleryItem = document.createElement("project-card");
                             window.galleryItem.setAttribute("title", `${project.title}`);
@@ -102,7 +104,7 @@
                             window.galleryItem.setAttribute("description", `${project.description}`);
                             window.galleryItem.setAttribute("image1-url", `${project.image1_url}`);
                             window.galleryItem.setAttribute("image2-url", `${project.image2_url}`);
-                            window.galleryItem.setAttribute("image3-url", `${project.image3-url}`);
+                            window.galleryItem.setAttribute("image3-url", `${project.image3_url}`);
                             window.galleryItem.setAttribute("furtherReadings", `${project.furtherReadings}`);
 
                             document.getElementById("gallery").appendChild(window.galleryItem);

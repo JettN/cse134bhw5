@@ -14,8 +14,8 @@ class ProjectCard extends HTMLElement {
         const tech = this.getAttribute('tech') || 'Unkown Tech';
         const description = this.getAttribute('description') || 'No Description Provided';
         const img1url = this.getAttribute('image1-url') || '';
-        const img2url = this.getAttribute('image1-url') || '';
-        const img3url = this.getAttribute('image1-url') || '';
+        const img2url = this.getAttribute('image2-url') || '';
+        const img3url = this.getAttribute('image3-url') || '';
         const furtherReading = this.getAttribute('furtherReadings')
 
         // Template for component content
