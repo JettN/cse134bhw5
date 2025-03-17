@@ -11,11 +11,26 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
         <style>
-            blockquote{
-                background-color: white;
-            }
             .highlight{
                 color: green;
+            }
+
+            #content {
+                display: grid;
+                grid-template-columns: auto auto;
+
+            }
+
+            #PicOfSelf {
+                grid-column: 1;
+            }
+
+            #bio {
+                grid-column: 2;
+            }
+
+            #skills {
+                grid-column: 2;
             }
         </style>
     </head>
@@ -42,22 +57,24 @@
             </nav>
         </header>
 
-        <main>
+        <main id="content">
             <hr>
             <!--Pic of me-->
-            <figure>
-                <picture>
-                    <source srcset="../static/images/Pic of me 800.jpg" media="(min-width: 800px)">
-                    <source srcset="../static/images/Pic of me 570.jpg" media="(min-width: 570px)">
-                    <img src="../static/images/pic of me hawaii 2024.jpg" alt="Picture of Jett Ngo">
-                </picture>
-                <figcaption>Picture of Jett Ngo</figcaption>
-            </figure>
-
-            <blockquote cite="https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says">
-                "The only way to do great work is to love what you do."
-                <footer id="noPadding">— <cite>Steve Jobs, <i>Stanford Commencement Address</i></cite></footer>
-            </blockquote>
+            <div id="PicOfSelf">
+                <figure>
+                    <picture>
+                        <source srcset="../static/images/Pic of me 800.jpg" media="(min-width: 800px)">
+                        <source srcset="../static/images/Pic of me 570.jpg" media="(min-width: 570px)">
+                        <img src="../static/images/pic of me hawaii 2024.jpg" alt="Picture of Jett Ngo">
+                    </picture>
+                    <figcaption>Picture of Jett Ngo</figcaption>
+                </figure>
+    
+                <blockquote cite="https://news.stanford.edu/stories/2005/06/youve-got-find-love-jobs-says">
+                    "The only way to do great work is to love what you do."
+                    <footer id="noPadding">— <cite>Steve Jobs, <i>Stanford Commencement Address</i></cite></footer>
+                </blockquote>
+            </div>
 
             <br>
 
