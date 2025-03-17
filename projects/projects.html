@@ -102,10 +102,11 @@
                         }
         
                         const jsonData = await response.json();
+                        const myData = jsonData.record.record
                         console.log("jsonDATA", jsonData);
-                        console.log("jsonDATA record", jsonData.record);
-                        localStorage.setItem("data", JSON.stringify(jsonData.record))
-                        await jsonData.record.forEach(project => {
+                        console.log("jsonDATA record", myData);
+                        localStorage.setItem("data", JSON.stringify(myData))
+                        await myData.forEach(project => {
                             console.log(project);
 
                             window.galleryItem = document.createElement("project-card");
