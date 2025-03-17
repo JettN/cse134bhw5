@@ -19,6 +19,9 @@ export function getComponentCSS() {
 
                 .heading {
                     color: #47A8BD;
-            }
+                }
+                
+                a {
+                    color: #B2D3A8}
             `;
         }
