@@ -19,6 +19,25 @@
                 grid-template-columns: auto auto;
 
             }
+            .template{
+                display: flex;
+                flex-direction: column;
+                border: .25rem solid #0A210F;
+                margin: auto;
+                padding: 2rem;
+                text-align: center;
+                width: 40dvw;
+                background-color: #85144B;
+                color: white; 
+            }
+
+            .caption {
+                font: 70% bold;
+            }
+
+            .heading {
+                color: #47A8BD;
+        }
         </style>
     </head>
     <body>
@@ -49,33 +68,19 @@
             </div>
             <br>
         </header>
-        <img src="../static/images/138_brain_scan_900-min.png" alt="">
-        <img src="../static/images/138 brain scan 500.webp" alt="">
-        <img src="../static/images/138 brain scan 680-min.png" alt="">
-        
-
-        <img src="../static/images/158r report 900-min.PNG" alt="">
-        <img src="../static/images/158r report 500-min.PNG" alt="">
-        <img src="../static/images/158r report 604-min.PNG" alt="">
-        
-
-        <img src="../static/images/successorator1_960.webp" alt="">
-        <img src="../static/images/successorator1_960_500x500.webp" alt="">
-        <img src="../static/images/successorator1_700.webp" alt="">
-
-
         <main>
-            <div class="template">
+            <div class="template" id="example_card">
                 <h2 class="heading">Example Card</h2>
                 <picture style="display: inline-block;">
-                    <source srcset="${img1url}" media="(min-width: 1500px)">
-                    <source srcset="${img2url}" media="(min-width: 200px)">
-                    <img src="${img3url}" alt="${title} main screen">
+                    <source srcset="../static/images/kiwi.jpg" media="(min-width: 1500px)">
+                    <source srcset="../static/images/kiwi.jpg" media="(min-width: 200px)">
+                    <img src="../static/images/kiwi.jpg" alt="Picture of my dog Kiwi">
                 </picture>
-                <p class="caption">Tech stack: ${tech}</p>
-                <p>${description}</p>
-                <a href="${furtherReading}">Further Reading</a>
+                <p class="caption">Tech stack: None</p>
+                <p>If you're seeing this, the projects have not been loaded yet. Click on one of the buttons above to load the projects.</p>
+                <a href="../index.html">About Me</a>
             </div>
+
             <div id="gallery"></div>
 
             <script type="module" src="../static/js/component.js"></script>
@@ -96,6 +101,9 @@
                         return;
                     }
                     else{
+                        const example = document.getElementById("example_card");
+                        example.style.display = "none";
+
                         await data.forEach(project => {
 
                             console.log(project)
@@ -130,6 +138,8 @@
                         console.log("jsonDATA", jsonData);
                         console.log("jsonDATA record", myData);
                         localStorage.setItem("data", JSON.stringify(myData))
+                        const example = document.getElementById("example_card");
+                        example.style.display = "none";
                         await myData.forEach(project => {
                             console.log(project);
 
