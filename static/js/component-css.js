@@ -22,8 +22,8 @@ export function getComponentCSS() {
                 }
                 
                 .card_link {
-                    color: #B2D3A8;
-                    text-decoration: underline;
+                    color: #B2D3A8 !important;
+                    text-decoration: underline !important;
                 }
             `;
         }
