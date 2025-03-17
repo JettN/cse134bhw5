@@ -1,9 +1,9 @@
 :root {
-    --background-light: #ffffff;
+    --background-light: #DFBBB1;
     --background-dark: #121212;
-    --text-light: #000000;
+    --text-light: #000022;
     --text-dark: #ffffff;
-    --button-light: #f0f0f0;
+    --button-light: #008DD5;
     --button-dark: #333333;
 }
 
