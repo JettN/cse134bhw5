@@ -159,9 +159,6 @@ img {
     margin-right: auto;
 }
 
-img:hover{
-    transform: rotate(0.5turn);
-}
 
 iframe {
     display: block;
