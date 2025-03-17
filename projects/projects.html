@@ -56,6 +56,7 @@
                 localBtn.addEventListener("click", () => {
                     console.log("loading from local");
                     const data = localStorage.getItem("data")
+                    console.log(data)
                     if(typeof data === 'undefined' || data === null){
                         alert("There is no data store locally. Load data from remote first.");
                         return;
