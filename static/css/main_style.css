@@ -296,6 +296,7 @@ footer {
     #content {
         display: flex;
         flex-direction: column;
+    }
 }
 
 /* Medium screens (tablets/laptops) */
