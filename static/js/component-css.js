@@ -5,7 +5,7 @@ export function getComponentCSS() {
                     flex-direction: column;
                     border: .25rem solid #0A210F;
                     margin: auto;
-                    padding: 2rem;
+                    justify-content: center;
                     text-align: center;
                     width: 100%;
                     height: 100%;
