@@ -10,7 +10,6 @@ export function getComponentCSS() {
                     width: 50vw;
                     background-color: #85144B;
                     color: white; 
-                    flex: 0 0 auto;
                 }
 
                 .caption {
