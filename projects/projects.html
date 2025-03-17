@@ -63,7 +63,7 @@
                     }
                     else{
                         data.forEach(project => {
-
+                            console.log(project)
                             window.galleryItem = document.createElement("project-card");
                             window.galleryItem.setAttribute("title", `${project.title}`);
                             window.galleryItem.setAttribute("tech", `${project.tech}`);
@@ -93,6 +93,7 @@
                         const jsonData = await response.json();
                         console.log(jsonData);
                         localStorage.setItem("data", JSON.stringify(jsonData.record))
+                        console.log(jsonData.record)
                         await jsonData.record.forEach(project => {
 
                             window.galleryItem = document.createElement("project-card");
