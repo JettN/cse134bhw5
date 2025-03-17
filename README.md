@@ -9,3 +9,5 @@ I removed image rotation when hovered feature. It was giving me a headache const
 Added `<hr>` tag at the end of every `<header>` for consistency
 
 Moved all style tags and JS code into files seperate from the html files for personal preference (HTML pages were becoming cluttered)
+
+Removed No JS contact form because there is no reason to have two contact forms
